@@ -23,6 +23,7 @@ pip install kaolin==0.17.0 -f https://nvidia-kaolin.s3.us-east-2.amazonaws.com/t
 MAX_JOBS=8 pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable" (this will take some time to compile)
 pip install -r requirements.txt
 ```
+## Practice
 ### Render your first mesh
 To render a mesh using Pytorch3D, you will need a mesh that defines the geometry and
 texture of an object, a camera that defines the viewpoint, and a Pytorch3D renderer
