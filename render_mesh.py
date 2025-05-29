@@ -113,12 +113,12 @@ def render_cow(
                 [0, 0, -1],
                 [0, 1,  0]
         ], dtype=torch.float32).unsqueeze(0)  
-    cameras = pytorch3d.renderer.FoVPerspectiveCameras(
-        R=torch.eye(3).unsqueeze(0), T=torch.tensor([[0, 0, 3]]), fov=60, device=device
-    )
     # cameras = pytorch3d.renderer.FoVPerspectiveCameras(
-    #     R=R_x, T=torch.tensor([[0, 0, 3]]), fov=50, device=device
+    #     R=torch.eye(3).unsqueeze(0), T=torch.tensor([[0, 0, 3]]), fov=60, device=device
     # )
+    cameras = pytorch3d.renderer.FoVPerspectiveCameras(
+        R=R_x, T=torch.tensor([[0, 0, 3]]), fov=50, device=device
+    )
 
     # Place a point light in front of the cow.
     lights = pytorch3d.renderer.PointLights(location=[[0, 0, -3]], device=device)
