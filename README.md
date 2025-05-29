@@ -83,6 +83,10 @@ the following output:
 
 ### Synthesis views
 
+Check the file `task1_synthesis_views.py` for the code that renders a 360-degree gif video that shows many continuous views of the provided cow mesh.
+The output gif is:
+![Cow render](output/cow_turntable.gif)
+
 Your first task is to create a 360-degree gif video that shows many continuous views of the provided cow mesh. You will be expected to show full turntable views of your outputs. You may find the following helpful:
 * [`pytorch3d.renderer.look_at_view_transform`](https://pytorch3d.readthedocs.io/en/latest/modules/renderer/cameras.html#pytorch3d.renderer.cameras.look_at_view_transform):
 Given a distance, elevation, and azimuth, this function returns the corresponding
@@ -108,6 +112,10 @@ imageio.mimsave('my_gif.gif', my_images, fps=15)
 ```
 
 ### Camera Transformations
+
+Check the file `task2_camera_transformations.py` for the code that finds the relative camera transformations that would produce the following output image.
+The output image is:
+![Cow render](images/cow_rotation.jpg)
 
 When working with 3D, finding a reasonable camera pose is often the first step to
 producing a useful visualization, and an important first step toward debugging.
